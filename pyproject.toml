@@ -8,7 +8,6 @@ dependencies = [
     "funnylog",
     "pyscreeze==0.1.28",
     "pyautogui==0.9.53",
-    "easyprocess",
 ]
 dynamic = [
   "version",

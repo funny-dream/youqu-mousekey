@@ -11,7 +11,6 @@ from funnylog import logger
 os.environ["DISPLAY"] = ":0"
 
 import pyautogui
-import easyprocess
 
 pyautogui.FAILSAFE = False
 
@@ -236,7 +235,7 @@ class MouseKey:
             return False
 
         if check_chinese():
-            easyprocess.EasyProcess(f"xdotool type --delay {delay_time} '{message}'".split(" ")).call()
+            os.system(f"xdotool type --delay {delay_time} '{message}'")
         else:
             pyautogui.typewrite(message=str(message), interval=interval)
 
